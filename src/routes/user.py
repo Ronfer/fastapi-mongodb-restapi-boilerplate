@@ -7,12 +7,12 @@ from dotenv import load_dotenv
 from typing import List
 from ..models.user_schemas import *
 from ..db import connect_to_database
-# from ..utils import hash
-from .. import auth
+from ..auth import AuthHandler
 
 
 router = APIRouter(prefix="/users", tags=["Users"])
 load_dotenv()
+auth_handler = AuthHandler()
 client = connect_to_database(os.environ.get("MONGO_URI"))
 
 
@@ -22,7 +22,7 @@ async def create_user(user: CreateUser):
     [summary]
     Create new user
     """
-    hashed_pwd = auth.hash(user.password)
+    hashed_pwd = auth_handler.get_password_hash(user.password)
     user.password = hashed_pwd
     
     user = jsonable_encoder(user)
