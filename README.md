@@ -1,4 +1,4 @@
-fastapi-mongodb-restapi-boilerplate
+FastAPI boilerplate project with basic Async CRUD operations, JWT authenticated endpoints and MongoDB as backend.
 
 # How to use
 
@@ -11,3 +11,5 @@ MONGO_URI = "Connection String URI"
 SECRET_KEY = 12345
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 ```
+
+Rest of the steps coming soon.
