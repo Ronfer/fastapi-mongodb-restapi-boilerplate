@@ -1,4 +1,4 @@
-FastAPI boilerplate project with basic Async CRUD operations, JWT authenticated endpoints and MongoDB as backend.
+FastAPI boilerplate project with basic Async CRUD operations, JWT authenticated endpoints and MongoDB as database.
 
 # How to use
 
