@@ -6,7 +6,7 @@ from fastapi.encoders import jsonable_encoder
 from bson.objectid import ObjectId
 from dotenv import load_dotenv
 from typing import List
-from ..models.post_schemas import (PostBase,
+from ..models.post_schemas import (
                                     CreatePost,
                                     UpdatePost,
                                     ResponsePost)
